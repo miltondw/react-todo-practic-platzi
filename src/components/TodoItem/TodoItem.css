@@ -13,11 +13,22 @@ span {
   font-size: 24px;
   color: #716f6f;
 }
-.close {
+.delete {
   position: absolute;
   right: 1rem;
   top: -1rem;
 }
-.yes{
+.delete:hover {
+  color: red;
+  cursor: pointer;
+}
+.check{
     place-self: center;
+    cursor: pointer;
+}
+.check--active {
+  color: #4caf50;
+}
+.todo--completed{
+  text-decoration: line-through;
 }
