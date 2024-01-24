@@ -1,0 +1,23 @@
+li {
+  border-radius: 2px;
+  background: #fafafa;
+  box-shadow: 0px 5px 50px 0px rgba(32, 35, 41, 0.15);
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  position: relative;
+}
+span {
+  font-size: 24px;
+  color: #716f6f;
+}
+.close {
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+}
+.yes{
+    place-self: center;
+}

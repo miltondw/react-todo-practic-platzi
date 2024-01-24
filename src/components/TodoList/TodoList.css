@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+    padding: 0;
+    width: 327px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    position: relative;
+}
