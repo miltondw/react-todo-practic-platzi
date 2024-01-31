@@ -15,12 +15,15 @@ span {
 }
 .delete {
   position: absolute;
+  cursor: pointer;
   right: 1rem;
   top: -1rem;
 }
-.delete:hover {
-  color: red;
-  cursor: pointer;
+.delete circle{
+  fill: #716f6f;
+}
+.delete:hover circle{
+  fill: red;
 }
 .check{
     place-self: center;
