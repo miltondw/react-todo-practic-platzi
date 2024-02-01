@@ -16,11 +16,11 @@ export default function ModalCreateTodo() {
     <div className="content-modal">
       <div className="modal">
         <h3>Escribe tu nuevo TODO</h3>
-        <input
+        <textarea
           type="text"
           placeholder="Escribe tu nuevo TODO"
           onChange={changeValue}
-          className="input-create"
+          className="text-create"
           ref={inputRef}
           onKeyDown={handleKeyPress}
         />

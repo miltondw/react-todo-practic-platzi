@@ -16,7 +16,7 @@
   line-height: normal;
   padding: 37px;
 }
-.content-modal input {
+.content-modal .text-create {
   width: 247px;
   min-height: 112px;
   color: #a5a5a5;
@@ -27,9 +27,13 @@
   line-height: 28px;
   display: block;
   margin: auto;
+  resize: none;
 }
-.content-modal input::placeholder {
+.content-modal .text-create::placeholder {
   color: #a5a5a5;
+}
+.text-create:focus {
+  outline-color: #61DAFA;
 }
 .btns {
   display: flex;

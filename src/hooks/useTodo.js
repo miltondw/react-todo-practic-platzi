@@ -1,22 +1,26 @@
 import { useState } from "react";
 
 export default function useTodo(saveTodos, closeModal, todos) {
-  const [todosNewCreate, setTodo] = useState(todos);
+  const [addTodo, setTodo] = useState();
   const [searchValue, setSearchValue] = useState("");
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
   const changeValue = (e) => {
     const value = e.target.value;
     const newTodo = {
-      text: value,
+      text: value.trim(),
       completed: false,
     };
     setTodo(newTodo);
   };
   const createTodo = () => {
-    const todosCreated = [...todos, todosNewCreate];
-    saveTodos(todosCreated);
-    closeModal();
+    if (addTodo) {
+      const todosCreated = [...todos, addTodo];
+      saveTodos(todosCreated);
+      closeModal();
+    } else {
+      alert("El campo no puede estar vació");
+    }
   };
   const searchedTodos = todos.filter((todo) => {
     const todoText = todo.text.toLowerCase();
