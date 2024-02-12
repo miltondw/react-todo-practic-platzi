@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/miltondw/react-todo-practic-platzi/static/css/main.639fe3ef.css",
+    "main.js": "/miltondw/react-todo-practic-platzi/static/js/main.3297ac97.js",
+    "index.html": "/miltondw/react-todo-practic-platzi/index.html",
+    "main.639fe3ef.css.map": "/miltondw/react-todo-practic-platzi/static/css/main.639fe3ef.css.map",
+    "main.3297ac97.js.map": "/miltondw/react-todo-practic-platzi/static/js/main.3297ac97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.639fe3ef.css",
+    "static/js/main.3297ac97.js"
+  ]
+}
