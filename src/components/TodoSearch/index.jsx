@@ -1,8 +1,6 @@
-import { useContext,useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./TodoSearch.css";
-import { TodoContext } from "../../TodoContext";
-export default function TodoSearch() {
-  const { searchValue, setSearchValue } = useContext(TodoContext);
+export default function TodoSearch({searchValue,setSearchValue}) {
   const inputRef = useRef();
   useEffect(() => {
     inputRef.current.focus();

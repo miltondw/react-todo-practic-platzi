@@ -2,10 +2,10 @@ import React from "react";
 import "./CreateTodoButton.css";
 function CreateTodoButton({showModal}) {
   return (
-    <button className="btn-create" title="crear tarea" onClick={showModal}>
+    <button className="btn-create" title="crear tarea" onClick={showModal} type="button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="113"
+        width="150"
         height="104"
         viewBox="0 0 113 104"
         fill="none"

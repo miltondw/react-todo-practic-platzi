@@ -1,16 +1,22 @@
-import { useContext, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./ModalCreateTodo.css";
-import { TodoContext } from "../../TodoContext";
-export default function ModalCreateTodo() {
-  const { changeValue, createTodo, closeModal } = useContext(TodoContext);
+export default function ModalCreateTodo({
+  changeValue,
+  createTodo,
+  closeModal,
+}) {
   const inputRef = useRef();
   useEffect(() => {
     inputRef.current.focus();
   }, []);
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      createTodo()
+      createTodoClick();
     }
+  };
+  const createTodoClick = () => {
+    createTodo();
+    closeModal();
   };
   return (
     <div className="content-modal">
@@ -28,7 +34,7 @@ export default function ModalCreateTodo() {
           <button className="btn-close" onClick={closeModal}>
             Cancelar
           </button>
-          <button className="btn-add" onClick={createTodo}>
+          <button className="btn-add" onClick={createTodoClick}>
             Añadir
           </button>
         </div>
