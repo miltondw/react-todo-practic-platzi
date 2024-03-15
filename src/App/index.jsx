@@ -7,7 +7,7 @@ import ModalCreateTodo from "../components/ModalCreateTodo";
 import TodosLoading from "../components/TodosLoading";
 import Modal from "../components/Modal";
 import useTodo from "../hooks/useTodo";
-import { ChangeAlertWithStorageListener } from "../components/ChangeAlert";
+import { ChangeAlert } from "../components/ChangeAlert";
 
 function App() {
   const {
@@ -78,7 +78,7 @@ function App() {
           />
         </Modal>
       )}
-      <ChangeAlertWithStorageListener synchronizeTodos={synchronizeTodos}/>
+      <ChangeAlert synchronizeTodos={synchronizeTodos}/>
     </main>
   );
 }

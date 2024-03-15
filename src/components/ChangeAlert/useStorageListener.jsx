@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function withStorageListener(WrappedComponent) {
-  return function WrappedComponentWithStorageListener(props) {
+export default function useStorageListener(synchronizeTodos) {
     const [storageChange, setStorageChange] = useState(false);
 
     useEffect(() => {
@@ -19,9 +18,8 @@ export default function withStorageListener(WrappedComponent) {
       };
     }, []);
     const toggleShow = () => {
-      props.synchronizeTodos();
+      synchronizeTodos();
       setStorageChange(false);
     };
-    return <WrappedComponent show={storageChange} toggleShow={toggleShow} />;
-  };
+    return { show: storageChange, toggleShow };
 }
