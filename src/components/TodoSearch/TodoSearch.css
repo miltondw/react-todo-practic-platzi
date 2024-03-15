@@ -22,3 +22,6 @@ input {
 input:focus {
   outline-color: #61DAFA;
 }
+input:disabled{
+  opacity: 25%;
+}

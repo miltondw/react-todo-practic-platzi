@@ -28,16 +28,35 @@ function App() {
 
   return (
     <main className="app-container">
-      <TodoCounter completedTodos={completedTodos} totalTodos={totalTodos} />
-      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+      <TodoCounter loading={loading} completedTodos={completedTodos} totalTodos={totalTodos} />
+      <TodoSearch loading={loading} searchValue={searchValue} setSearchValue={setSearchValue} />
       <TodoList
         loading={loading}
         error={error}
+        totalTodos={totalTodos}
+        searchText={searchValue}
         searchedTodos={searchedTodos}
         onEmptyTodos={() => <p>Crea tu primer Todo!</p>}
+        onEmptySearchResult={(searchText) => (
+          <p>
+            No hay Resultados para{" "}
+            <span style={{ fontWeight: "bold" }}>{searchText}</span>
+          </p>
+        )}
         onError={() => <p>Upps hay un error...</p>}
         onLoading={() => <TodosLoading />}
-        render={(todo, i) => (
+        // * Esto es un ejm para mostrar que el componente funciona tanto con PROPS como con CHILDREN
+        // render={(todo, i) => (
+        //   <TodoItem
+        //     key={i}
+        //     text={todo.text}
+        //     completed={todo.completed}
+        //     onComplete={() => completeTodo(i)}
+        //     onDelete={() => deleteTodo(i)}
+        //   />
+        // )}
+      >
+        {(todo, i) => (
           <TodoItem
             key={i}
             text={todo.text}
@@ -46,8 +65,8 @@ function App() {
             onDelete={() => deleteTodo(i)}
           />
         )}
-      />
-      <CreateTodoButton showModal={showModal}/>
+      </TodoList>
+      <CreateTodoButton showModal={showModal} />
       {openModal && (
         <Modal>
           <ModalCreateTodo

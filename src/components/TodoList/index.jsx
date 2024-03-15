@@ -8,15 +8,19 @@ export default function TodoList({
   onLoading,
   onEmptyTodos,
   render,
+  searchText,
+  onEmptySearchResult,
+  totalTodos,
+  children,
 }) {
+  const renderFunc = children || render;
   return (
     <section className="todolist-container">
       {loading && onLoading()}
       {error && onError()}
-      {!loading && !searchedTodos.length && onEmptyTodos()}
-      <ul>
-        {searchedTodos.map(render)}
-      </ul>
+      {!loading && !totalTodos && onEmptyTodos()}
+      {!!totalTodos && !searchedTodos.length && onEmptySearchResult(searchText)}
+      <ul>{searchedTodos.map(renderFunc)}</ul>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-h1 {
+.todo-counter {
   color: #1e1e1f;
   text-align: center;
   font-size: 24px;
@@ -6,6 +6,9 @@ h1 {
   font-weight: 400;
   line-height: normal;
   padding: 48px;
+}
+.todo-counter--loading{
+  opacity: 25%;
 }
 span{
     font-weight: bold;
