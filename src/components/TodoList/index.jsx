@@ -20,7 +20,7 @@ export default function TodoList({
       {error && onError()}
       {!loading && !totalTodos && onEmptyTodos()}
       {!!totalTodos && !searchedTodos.length && onEmptySearchResult(searchText)}
-      <ul>{searchedTodos.map(renderFunc)}</ul>
+      {(!loading && !error) && <ul>{searchedTodos.map(renderFunc)}</ul>}
     </section>
   );
 }

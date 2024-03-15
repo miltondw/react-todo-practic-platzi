@@ -2,7 +2,7 @@ import { useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 
 export default function useTodo() {
-  const [todos, saveTodos, loading, error] = useLocalStorage("Todos_v1", []);
+  const [todos, saveTodos, loading, error,synchronizeTodos] = useLocalStorage("Todos_v1", []);
 
   const [addTodo, setTodo] = useState();
   const [searchValue, setSearchValue] = useState("");
@@ -64,5 +64,6 @@ export default function useTodo() {
     openModal,
     showModal,
     closeModal,
+    synchronizeTodos
   };
 }

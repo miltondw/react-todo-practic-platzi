@@ -4,6 +4,7 @@ export default function useLocalStorage(itemName, initialValue) {
   const [items, setItems] = useState(initialValue);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [synchronizedItem, setsynchronizedItem] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -18,15 +19,21 @@ export default function useLocalStorage(itemName, initialValue) {
           setItems(parseItems);
         }
         setLoading(false);
+        setsynchronizedItem(true)
       } catch (error) {
         setLoading(false);
         setError(true);
       }
     }, 2000);
-  }, [itemName, initialValue]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [synchronizedItem]);
   const saveItems = (newItems) => {
     localStorage.setItem(itemName, JSON.stringify(newItems));
     setItems(newItems);
   };
-  return [items, saveItems, loading, error];
+  const synchronize=()=>{
+    setLoading(true)
+    setsynchronizedItem(false)
+  }
+  return [items, saveItems, loading, error, synchronize];
 }
