@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-todo-practic-platzi/static/css/main.f099947a.css",
-    "main.js": "/react-todo-practic-platzi/static/js/main.5c1fc5a1.js",
+    "main.css": "/react-todo-practic-platzi/static/css/main.4c3069ee.css",
+    "main.js": "/react-todo-practic-platzi/static/js/main.53b0423f.js",
     "index.html": "/react-todo-practic-platzi/index.html",
-    "main.f099947a.css.map": "/react-todo-practic-platzi/static/css/main.f099947a.css.map",
-    "main.5c1fc5a1.js.map": "/react-todo-practic-platzi/static/js/main.5c1fc5a1.js.map"
+    "main.4c3069ee.css.map": "/react-todo-practic-platzi/static/css/main.4c3069ee.css.map",
+    "main.53b0423f.js.map": "/react-todo-practic-platzi/static/js/main.53b0423f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f099947a.css",
-    "static/js/main.5c1fc5a1.js"
+    "static/css/main.4c3069ee.css",
+    "static/js/main.53b0423f.js"
   ]
 }
