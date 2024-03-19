@@ -1,99 +1,24 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# Aplicación de Lista de Tareas con React.js
 
-¡Hola, Platzinauta!
+Este proyecto es una aplicación de lista de tareas desarrollada con React.js y utilizando el contexto (`useContext`) para la gestión del estado global de la aplicación. También se han aplicado varios conceptos básicos de React como patrones de render y composición.
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+## Características
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+- Gestión del estado global de la aplicación utilizando el hook `useContext`.
+- Implementación de una lista de tareas con capacidad para agregar, marcar como completadas y eliminar tareas guardando el estado en el LocalStorage.
+- Despliegue de la aplicación en GitHub Pages.
+- Implementación de dos ramas: `curso-basico` y `patrones`.
+  - **curso-basico:** Utiliza el contexto para la gestión del estado.
+  - **patrones:** Implementa mejoras utilizando patrones de render y composición, creando HOCs para el cambio del almacenamiento entre páginas y otras optimizaciones.
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+## Demostración
 
-## Getting Started with Create React App
+Puedes acceder a la aplicación desplegada en GitHub Pages [aquí](https://miltondw.github.io/react-todo-practic-platzi/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contribuyendo
 
-## Available Scripts
+Si deseas contribuir a este proyecto, ¡estás más que bienvenido! Siéntete libre de abrir un nuevo problema o enviar una solicitud de extracción.
 
-In the project directory, you can run:
+## Licencia
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Este proyecto está bajo la licencia MIT.
