@@ -10,28 +10,32 @@ import useTodo from "../hooks/useTodo";
 import { ChangeAlert } from "../components/ChangeAlert";
 
 function App() {
+  const { states, statesUpdaters } = useTodo();
+  const { searchValue, completedTodos, totalTodos, loading, error, openModal } =
+    states;
   const {
     setSearchValue,
-    searchValue,
-    completedTodos,
-    totalTodos,
     changeValue,
     createTodo,
     searchedTodos,
     completeTodo,
     deleteTodo,
-    error,
-    loading,
-    closeModal,
-    openModal,
     showModal,
-    synchronizeTodos
-  } = useTodo();
-
+    closeModal,
+    synchronizeTodos,
+  } = statesUpdaters;
   return (
     <main className="app-container">
-      <TodoCounter loading={loading} completedTodos={completedTodos} totalTodos={totalTodos} />
-      <TodoSearch loading={loading} searchValue={searchValue} setSearchValue={setSearchValue} />
+      <TodoCounter
+        loading={loading}
+        completedTodos={completedTodos}
+        totalTodos={totalTodos}
+      />
+      <TodoSearch
+        loading={loading}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <TodoList
         loading={loading}
         error={error}
@@ -78,7 +82,7 @@ function App() {
           />
         </Modal>
       )}
-      <ChangeAlert synchronizeTodos={synchronizeTodos}/>
+      <ChangeAlert synchronizeTodos={synchronizeTodos} />
     </main>
   );
 }

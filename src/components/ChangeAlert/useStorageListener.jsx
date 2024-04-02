@@ -5,8 +5,8 @@ export default function useStorageListener(synchronizeTodos) {
 
     useEffect(() => {
       const onChange = (change) => {
-        if (change.key === "Todos_v1") {
-          console.log("Hubo cambios en Todos_v1");
+        if (change.key === "TODOS_V1") {
+          console.log("Hubo cambios en TODOS_V1");
           setStorageChange(true);
         }
       };

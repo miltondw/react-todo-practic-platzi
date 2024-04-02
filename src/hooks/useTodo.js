@@ -2,7 +2,13 @@ import { useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 
 export default function useTodo() {
-  const [todos, saveTodos, loading, error,synchronizeTodos] = useLocalStorage("Todos_v1", []);
+  const {
+    items: todos,
+    saveItems: saveTodos,
+    loading,
+    error,
+    sincronizeItem: synchronizeTodos,
+  } = useLocalStorage("TODOS_V1", []);
 
   const [addTodo, setTodo] = useState();
   const [searchValue, setSearchValue] = useState("");
@@ -48,22 +54,27 @@ export default function useTodo() {
     newTodos.splice(i, 1);
     saveTodos(newTodos);
   };
-
-  return {
-    setSearchValue,
+  const states = {
     searchValue,
     completedTodos,
     totalTodos,
+    loading,
+    error,
+    openModal,
+  };
+  const statesUpdaters = {
+    setSearchValue,
     changeValue,
     createTodo,
     searchedTodos,
     completeTodo,
     deleteTodo,
-    loading,
-    error,
-    openModal,
     showModal,
     closeModal,
-    synchronizeTodos
+    synchronizeTodos,
+  };
+  return {
+    states,
+    statesUpdaters,
   };
 }
